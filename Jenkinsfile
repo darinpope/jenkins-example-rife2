@@ -40,9 +40,9 @@ pipeline {
         sh './bld test'
       }
     }
-    stage('jar') {
+    stage('uberjar') {
       steps {
-        sh './bld jar'
+        sh './bld uberjar'
       }
     }
     stage('Create the image') {
