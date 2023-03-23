@@ -1,12 +1,11 @@
-# fly.toml file generated for my-rifetwo-app on 2023-03-23T14:12:17-04:00
+# fly.toml file generated for my-rifetwo-app on 2023-03-23T14:32:12-04:00
 
 app = "my-rifetwo-app"
-primary_region = "iad"
+primary_region = "mia"
 
 [[services]]
   internal_port = 8080
   protocol = "tcp"
-
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
