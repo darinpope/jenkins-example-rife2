@@ -75,7 +75,7 @@ pipeline {
     }
     stage('deploy to fly') {
       steps {
-        sh 'flyctl regions set iad'
+        sh 'flyctl regions set mia'
         sh 'flyctl deploy --image $IMAGE_NAME:$IMAGE_VERSION --now'
       }
     }
