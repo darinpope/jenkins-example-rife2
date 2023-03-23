@@ -20,6 +20,11 @@ pipeline {
         '''
       }
     }
+    stage('download') {
+      steps {
+        sh './bld download'
+      }
+    }
     stage('compile') {
       steps {
         sh './bld clean compile'
