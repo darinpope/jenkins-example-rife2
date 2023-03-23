@@ -25,7 +25,7 @@ pipeline {
     }
     stage('download') {
       steps {
-        sh './bld download'
+        sh './bld download purge'
       }
     }
     stage('compile') {
