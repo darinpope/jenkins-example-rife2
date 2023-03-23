@@ -57,7 +57,7 @@ pipeline {
     }
     stage('trivy') {
       steps {
-        sh 'trivy $IMAGE_NAME:$IMAGE_VERSION'
+        sh 'trivy image $IMAGE_NAME:$IMAGE_VERSION'
       }
     }
     stage('login') {
