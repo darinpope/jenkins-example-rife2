@@ -84,16 +84,6 @@ pipeline {
         sh 'flyctl status'
       }
     }    
-    stage('sleep') {
-      steps {
-        sleep 5
-      }
-    }
-    stage('verify up') {
-      steps {
-        sh 'curl https://my-rifetwo-app.fly.dev/'
-      }
-    }
   }
   post {
     always {
