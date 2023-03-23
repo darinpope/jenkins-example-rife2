@@ -1,4 +1,4 @@
-# fly.toml file generated for my-rife2-app on 2023-03-23T13:11:09-04:00
+# fly.toml file generated for my-rifetwo-app on 2023-03-23T14:12:17-04:00
 
-app = "my-rife2-app"
+app = "my-rifetwo-app"
 primary_region = "iad"

@@ -5,7 +5,7 @@ pipeline {
     IMAGE_NAME="darinpope/my-rife2-app"
     IMAGE_VERSION="0.1.0"
     FLY_API_TOKEN=credentials('fly-api-token')
-    FLY_APP="my-rife2-app"
+    FLY_APP="my-rifetwo-app"
   } 
   options {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
@@ -84,6 +84,16 @@ pipeline {
         sh 'flyctl status'
       }
     }    
+    stage('sleep') {
+      steps {
+        sleep 5
+      }
+    }
+    stage('verify up') {
+      steps {
+        sh 'curl https://my-rifetwo-app.fly.dev/'
+      }
+    }
   }
   post {
     always {
