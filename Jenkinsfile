@@ -6,6 +6,9 @@ pipeline {
     IMAGE_VERSION="0.1.0"
     FLY_API_TOKEN=credentials('fly-api-token')
     FLY_APP="my-rife2-app"
+  } 
+  options {
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
   }  
   stages {
     stage('verify tooling') {
