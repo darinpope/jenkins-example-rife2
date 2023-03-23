@@ -52,12 +52,12 @@ pipeline {
     }  
     stage('grype') {
       steps {
-        sh 'grype $IMAGE_NAME:IMAGE_VERSION --scope AllLayers'
+        sh 'grype $IMAGE_NAME:$IMAGE_VERSION --scope AllLayers'
       }
     }
     stage('trivy') {
       steps {
-        sh 'trivy $IMAGE_NAME:IMAGE_VERSION'
+        sh 'trivy $IMAGE_NAME:$IMAGE_VERSION'
       }
     }
     stage('login') {
