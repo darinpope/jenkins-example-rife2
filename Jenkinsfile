@@ -3,7 +3,7 @@ pipeline {
   environment {
     DH_CREDS=credentials('dh-creds')
     IMAGE_NAME="darinpope/my-rife2-app"
-    IMAGE_VERSION="0.0.1"
+    IMAGE_VERSION="0.1.0"
     FLY_API_TOKEN=credentials('fly-api-token')
     FLY_APP="my-rife2-app"
   }  
