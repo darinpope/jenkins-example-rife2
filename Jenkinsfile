@@ -84,7 +84,11 @@ pipeline {
   }
   post {
     always {
-      sh 'docker logout'
+      sh '''
+        docker rmi $IMAGE_NAME:$IMAGE_VERSION
+        docker logout
+      '''
+      cleanWs()
     }
   }  
 }
